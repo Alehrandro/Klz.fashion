@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mercado Livre – Protótipo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+<header>
+  <div class="top">
+    <button class="hb" id="menuBtn" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <div style="flex:1"></div><button class="adm" data-adm>Admin</button>
+    
+    <button class="hb" id="cmp" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <button class="hb" id="cartBtn" aria-label="Carrinho"><svg class="ico" viewBox="0 0 24 24"><path d="M2 3h3l3 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg><span class="badge" id="cartN"></span></button>
+  </div>
+  <div class="top" id="sb" hidden style="margin-top:10px">
+    <label class="search"><svg class="ico" viewBox="0 0 24 24" style="stroke:#888;width:20px"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Buscar" autocomplete="off"></label>
+  </div>
+</header>
+
+<div class="car">
+  <div class="slides" id="slides">
+    <div class="slide s1"><b>11.11</b><span class="pill">CUPOM NOVO TODO DIA</span><span>Até 11/11. Cartão de crédito sujeito à aprovação.</span></div>
+    <div class="slide s2"><b>Frete grátis</b><span>Em milhões de produtos a partir de R$ 79</span><span class="pill">Ver ofertas</span></div>
+    <div class="slide s3"><b>Ofertas Relâmpago</b><span>Descontos de até 50% por tempo limitado</span><span class="pill">Aproveitar</span></div>
+  </div>
+  <div class="dots" id="dots"></div>
+</div>
+
+
+<div class="cats" id="cats"></div>
+
+<section class="sec">
+  <h2 id="ttl">Produtos recomendados para você</h2>
+  <div class="grid" id="grid"></div>
+</section>
+</div>
+
+<nav id="nav">
+  <button data-t="home" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg>Início</button>
+  <button data-t="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Buscar</button>
+  <button data-t="orders"><svg viewBox="0 0 24 24"><path d="M6 2l-2 5v14h16V7l-2-5zM4 7h16M9 11a3 3 0 006 0"/></svg>Compras</button>
+  <button data-t="favs"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>Favoritos<span class="badge" id="favN"></span></button>
+  <button data-t="menu"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Menu</button>
+</nav>
+
+<div class="ov" id="pd"></div><div class="ov" id="ct"></div><div class="ov" id="ad"></div><div class="ov" id="au"></div><div class="ov" id="co"></div>
+<div class="sheet-bg" id="bg"></div>
+<aside class="sheet" id="sheet"><h3>Olá, visitante</h3><a data-adm>Painel Admin</a><a data-acc>Minha conta</a><a>Minhas compras</a><a>Cupons</a><a>Ajuda</a><a id="theme">Alternar tema claro/escuro</a><div class="sct"><div>Entrar em contato com o vendedor</div><div class="row"><a id="wal" href="#" target="_blank" rel="noopener" aria-label="WhatsApp" hidden><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#25D366"/><path d="M24 11a13 13 0 00-11 19.7L11 37l6.5-1.7A13 13 0 1024 11z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M19 18c0 6 5 11 11 11l2-3-3-1.5-1.5 1.5c-2-1-3.5-2.5-4.5-4.5l1.5-1.5-1.5-3z" fill="#fff"/></svg></a><a id="igl" href="#" target="_blank" rel="noopener" aria-label="Instagram" hidden><svg viewBox="0 0 48 48"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".4" stop-color="#FA7E1E"/><stop offset=".7" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="url(#igg)"/><rect x="12" y="12" width="24" height="24" rx="7" fill="none" stroke="#fff" stroke-width="3"/><circle cx="24" cy="24" r="6" fill="none" stroke="#fff" stroke-width="3"/><circle cx="31" cy="17" r="1.8" fill="#fff"/></svg></a></div></div></aside>
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
